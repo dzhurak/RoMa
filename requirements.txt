@@ -1,9 +1,7 @@
 torch
 einops
 torchvision
-opencv-python
 kornia
-albumentations
 loguru
 tqdm
 matplotlib
