@@ -45,7 +45,7 @@ def roma_outdoor(device, weights=None, dinov2_weights=None, coarse_res: Union[in
     if dinov2_weights is None:
         dinov2_weights = torch.hub.load_state_dict_from_url(weight_urls["dinov2"],
                                                      map_location=device)
-    model = roma_model(resolution=coarse_res, upsample_preds=True,
+    model = roma_model(resolution=coarse_res, upsample_preds=False,
                weights=weights,dinov2_weights = dinov2_weights,device=device, amp_dtype=amp_dtype)
     model.upsample_res = upsample_res
     print(f"Using coarse resolution {coarse_res}, and upsample res {model.upsample_res}")
